@@ -1,0 +1,22 @@
+{
+  "name": "@eng-platform/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "ts-node-dev --esm src/index.ts",
+    "test": "vitest run",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@eng-platform/shared": "*",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.13.4",
+    "ts-node-dev": "^2.0.0",
+    "vitest": "^3.0.5"
+  }
+}

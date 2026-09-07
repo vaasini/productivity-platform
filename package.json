@@ -1,0 +1,25 @@
+{
+  "name": "eng-platform",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Engineering Productivity Platform monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @eng-platform/shared && npm run build -w @eng-platform/backend && npm run build -w @eng-platform/frontend",
+    "lint": "eslint \"packages/*/src/**/*.{ts,tsx}\"",
+    "test": "npm run test --workspaces --if-present",
+    "format": "prettier --write \"packages/**/*.{ts,tsx,json,md}\" \"*.{json,md,cjs}\""
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
+    "eslint": "^8.57.1",
+    "prettier": "^3.5.1",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
